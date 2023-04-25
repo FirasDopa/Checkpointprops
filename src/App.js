@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Profile from './Component/Profile';
 
 function App() {
+  // alert on button using handleName
+  function handleName() {
+    alert("For more information check linkedin or facebook account on Firas Silini")
+  }
+  
   return (
+        /* calling prop-children and giving them properties */
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile name="Firas Silini" age="27" bio="Open to learn new things" profession="Electromechanical engineer/Fullstack js Developer" data={handleName} >
+      <img src="https://w0.peakpx.com/wallpaper/966/122/HD-wallpaper-anime-jujutsu-kaisen-satoru-gojo.jpg" alt="Gojo" />
+      </Profile>
     </div>
   );
 }
